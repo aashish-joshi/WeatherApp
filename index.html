@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="includes/main.css">
+    <!-- W3 CSS -->
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,32 @@
             &COPY; <span id="year"></span> Fictional Weather App LLC
         </footer>
     </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Enter the OpenWeatherMap API Key.</h2>
+            </div>
+            <div class="modal-body">
+                <p>The API Key is stored on your browser. It is <b>not stored</b> on our servers.</p>
+                <br>
+                <form id="getKey" autocomplete="off">
+                    <label class="inputLabel" for="getKey">Your API Key: </label>
+                    <input type="text" name="apiKey" id="apiKey" required>
+                    <br>
+                    <button class="button" type="button" onclick="saveApiKey()">Save</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                Dont have an API key? <a href="https://home.openweathermap.org/api_keys" target="_blank">Get one from OpenWeatherMap</a> for free.
+            </div>
+        </div>
+    
+    </div>
+
     <script src="includes/main.js"></script>
 </body>
 </html>

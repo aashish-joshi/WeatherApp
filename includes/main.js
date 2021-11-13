@@ -1,3 +1,4 @@
+let myStorage = window.localStorage;
 const d = new Date();
 const fullYear = d.getFullYear();
 const date = d.getDate();
@@ -12,14 +13,8 @@ weekdays[3] = "Wednesday";
 weekdays[4] = "Thursday";
 weekdays[5] = "Friday";
 weekdays[6] = "Saturday";
-
+// Freeze the day array so that no changes are possible
 Object.freeze(weekdays);
-
-document.getElementById("year").innerHTML = fullYear;
-document.getElementById("currDate").innerHTML = `${fullYear}-${month}-${date}`;
-document.getElementById("currDay").innerHTML = `${weekdays[day]}`
-
-const api = 'e32ebe9ec27254648312c9c0b2a745ec';
 
 // store the DOM elements to be accessed
 const iconImg = document.getElementById('weather-icon');
@@ -29,8 +24,29 @@ const tempF = document.querySelector('.f');
 const desc = document.querySelector('.desc');
 const sunriseDOM = document.querySelector('.sunrise');
 const sunsetDOM = document.querySelector('.sunset');
+const modal = document.getElementById("myModal");
+const modalClose = document.getElementsByClassName("close");
 
-function getUserLocation(){
+document.getElementById("year").innerHTML = fullYear;
+document.getElementById("currDate").innerHTML = `${fullYear}-${month}-${date}`;
+document.getElementById("currDay").innerHTML = `${weekdays[day]}`
+
+function saveApiKey(){
+    key = document.getElementById("apiKey").value;
+    myStorage.setItem('api' , key);
+    console.log("page reloaded");
+    window.location.reload(true);
+}
+
+function closeModal(){
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+}
+
+function getUserLocation(apiKey){
     window.addEventListener('load', () => {
         let lon;
         let lat;
@@ -40,7 +56,7 @@ function getUserLocation(){
                 // console.log(position["coords"]);
                 lon = position.coords.longitude;
                 lat = position.coords.latitude;
-                const base = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api}&units=metric`;
+                const base = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
                 // console.log(base);
                 fetch(base)
                     .then((response) => {
@@ -78,4 +94,11 @@ function getUserLocation(){
     });
 }
 
-getUserLocation();
+
+if(!myStorage.getItem('api')){
+    // show a modal to user to get the api key
+    modal.style.display = 'block';
+}else{
+    // console.log(myStorage.getItem('api'));
+    getUserLocation(myStorage.getItem('api'));   
+}

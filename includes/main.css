@@ -62,3 +62,84 @@ hr {
   border: 0;
   margin: 5px 0;
 }
+a, a:visited,a:active {
+  text-decoration: none;
+  /*color: green;*/
+  color: rgb(224, 196, 91);
+  
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  font-family: 'Francois One', sans-serif;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  height: 60vh;
+  width: 30%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: grey;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 12px 16px;
+  color: black;
+  margin: 5% 0;
+}
+
+.modal-body {
+  padding: 10px 16px;
+}
+
+.modal-footer {
+  margin-top: 9vh;
+  padding: 12px 16px;
+  color: black;
+}
+
+.button {
+  background-color: rgb(251, 242, 133); /* Green */
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  font-family: 'Francois One', sans-serif;
+}
+

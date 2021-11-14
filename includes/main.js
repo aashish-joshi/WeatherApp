@@ -27,7 +27,6 @@ const sunsetDOM = document.querySelector('.sunset');
 const modal = document.getElementById("myModal");
 const modalClose = document.getElementsByClassName("close");
 
-document.getElementById("year").innerHTML = fullYear;
 document.getElementById("currDate").innerHTML = `${fullYear}-${month}-${date}`;
 document.getElementById("currDay").innerHTML = `${weekdays[day]}`
 
@@ -83,8 +82,8 @@ function getUserLocation(apiKey){
                         // Change the DOM elements
                         iconImg.src = iconUrl;
                         loc.textContent = `${place}`;
-                        tempC.textContent = `${tempCDOM} C`;
-                        tempF.textContent = `${tempFDOM} F`;
+                        tempC.textContent = `${tempCDOM} °C`;
+                        tempF.textContent = `${tempFDOM} °F`;
                         desc.textContent = `${description}`;
                         sunriseDOM.textContent = `${sunriseUTC.toLocaleTimeString()}`;
                         sunsetDOM.textContent = `${sunsetUTC.toLocaleTimeString()}`;

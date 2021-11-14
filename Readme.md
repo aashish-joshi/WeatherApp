@@ -3,10 +3,6 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-[![Issues][issues-shield]][]
-[![MIT License][license-shield]][]
-[![LinkedIn][linkedin-shield]][]
-
 
 
 <!-- PROJECT LOGO -->
@@ -57,8 +53,6 @@
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
-
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project

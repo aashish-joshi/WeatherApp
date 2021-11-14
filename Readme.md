@@ -1,8 +1,11 @@
 <div id="top"></div>
 
-[![Issues][issues-shield]][https://github.com/aashish-joshi/WeatherApp/issues]
-[![MIT License][license-shield]][https://github.com/aashish-joshi/WeatherApp/blob/dev/LICENSE]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/aashish-joshi-270a78118/]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Issues][issues-shield]][]
+[![MIT License][license-shield]][]
+[![LinkedIn][linkedin-shield]][]
 
 
 
@@ -17,7 +20,6 @@
 
   <p align="center">
     Get your local weather on your browser.
-    This is a proof-of-concept app based on HTML, CSS & JavaScript.
     <br />
     <a href="https://github.com/aashish-joshi/WeatherApp/wiki"><strong>Explore the docs »</strong></a>
     <br />
@@ -61,9 +63,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
+[![Product Name Screen Shot][product-screenshot]](https://aashishjoshi.co.in/WeatherApp)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -161,3 +161,12 @@ Project Link: [https://github.com/aashish-joshi/WeatherApp](https://github.com/a
 * [W3-CSS](https://www.w3schools.com/w3css/default.asp)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
+[issues-url]: https://github.com/aashish-joshi/WeatherApp/issues
+[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
+[license-url]: https://github.com/aashish-joshi/WeatherApp/blob/master/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/aashish-joshi-270a78118/
+[product-screenshot]: includes/WeatherApp.png

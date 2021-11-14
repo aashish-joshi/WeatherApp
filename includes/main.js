@@ -30,11 +30,18 @@ const modalClose = document.getElementsByClassName("close");
 document.getElementById("currDate").innerHTML = `${fullYear}-${month}-${date}`;
 document.getElementById("currDay").innerHTML = `${weekdays[day]}`
 
+
 function saveApiKey(){
     key = document.getElementById("apiKey").value;
-    myStorage.setItem('api' , key);
-    console.log("page reloaded");
-    window.location.reload(true);
+    if(key){
+        myStorage.setItem('api' , key);
+        console.log("key saved");
+        console.log("reloading page");
+        window.location.reload(true);
+    }else{
+        alert("Please enter the API key.");
+        console.log("key not entered");
+    }
 }
 
 function closeModal(){

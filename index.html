@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="includes/main.css">
+    <link rel="stylesheet" href="/includes/main.css">
+    <link rel="icon" type="image/x-icon" href="/includes/favicon.png">
     <!-- W3 CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;800&family=Francois+One&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Righteous&etBrains+Mono:ital,wght@0,600;1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,600;1,100&family=Lato:wght@100;400;900&display=swap" rel="stylesheet">
     <title>WeatherApp</title>
 </head>
 
 <body>
-    <div class="container">
+    <div class="page-container">
         <img src="" alt="" srcset="" id="weather-icon">
         <div id="location">Unable to Fetch Weather</div>
         <div class="desc">No Information Available</div>
@@ -31,37 +34,63 @@
             <h4>Sunset: <span class="sunset">No Information Available</span></h4>
         </div>
     </div>
-    <div class="footer">
-        <footer id = "footer">
-            &COPY; <span id="year"></span> Fictional Weather App LLC
-        </footer>
+    <!-- PAGE FOOTER START -->
+    <div class="page-footer">
+        <div id="page-footer">
+            <p>Fictional Weather App LLC&nbsp;|&nbsp;<span onclick="document.getElementById('myCreditsModal').style.display='block'">Credits</span></p>
+        </div>
     </div>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Enter the OpenWeatherMap API Key.</h2>
-            </div>
-            <div class="modal-body">
-                <p>The API Key is stored on your browser. It is <b>not stored</b> on our servers.</p>
-                <br>
+    <!-- PAGE FOOTER END -->
+    <!-- API KEY MODAL START -->
+    <div id="myModal" class="w3-modal modal">
+        <div class="w3-modal-content w3-card-4 w3-indigo">
+          <header class="w3-container align-center"> 
+            <span onclick="document.getElementById('myModal').style.display='none'" 
+            class="w3-button w3-display-topright">&times;</span>
+            <h3 class="modal">OpenWeatherMap API Key</h3>
+          </header>
+          <div class="w3-container">
+            <p class="modal-body align-center">Enter your OpenWeatherMap API Key to get the weather data.</p>
+            <p class="modal-body align-center">(The key is stored on your browser)</p>
+            <div class="modal-form align-center">
                 <form id="getKey" autocomplete="off">
-                    <label class="inputLabel" for="getKey">Your API Key: </label>
-                    <input type="text" name="apiKey" id="apiKey" required>
-                    <br>
+                    <input class="inputbox" type="text" name="apiKey" id="apiKey" required placeholder="Your API Key">
+            </div>
+            <div class="modal-form spacer-1"></div>
+            <div class="modal-form align-center">
                     <button class="button" type="button" onclick="saveApiKey()">Save</button>
                 </form>
             </div>
-            <div class="modal-footer">
-                Dont have an API key? <a href="https://home.openweathermap.org/api_keys" target="_blank">Get one from OpenWeatherMap</a> for free.
-            </div>
+          </div>
+          <footer class="w3-container modal-footer align-center">
+            <p>Don't have an API key? <a class="modal-links" href="https://home.openweathermap.org/api_keys" target="_blank" rel="noopener noreferrer">Get it</a> for free.</p>
+          </footer>
         </div>
-    
     </div>
+    <!-- API KEY MODAL END -->
 
-    <script src="includes/main.js"></script>
+    <!-- CREDITS MODAL START -->
+    <div id="myCreditsModal" class="w3-modal modal">
+        <div class="w3-modal-content w3-card-4 w3-indigo">
+          <header class="w3-container align-center"> 
+            <span onclick="document.getElementById('myCreditsModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+            <h3 class="modal">Credits</h3>
+          </header>
+          <div class="w3-container">
+              <ul>
+                  <li>I would like to acknowledge the help of the following resources in helping me create this mini-project.</li>
+                  <li>StudyTonight <a href="https://www.studytonight.com/post/how-to-build-a-weather-app-using-javascript-for-complete-beginners" class="modal-links" target="_blank" rel="noopener noreferrer">Weather App tutorial</a>.</li>
+                  <li>Favicon by <a href="https://www.freepik.com" title="Freepik" target="_blank" rel="noopener noreferrer">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noopener noreferrer">www.flaticon.com</a>.</li>
+                  <li>Core CSS framework by <a href="https://www.w3schools.com/" class="modal-links" target="_blank" rel="noopener noreferrer">W3 Schools</a>.</li>
+              </ul>
+          </div>
+          <footer class="w3-container modal-footer align-center">
+            <p>Have questions or feedback? Send me <a class="modal-links" href="https://home.openweathermap.org/api_keys" target="_blank" rel="noopener noreferrer">an email</a>.</p>
+          </footer>
+        </div>
+      </div>
+      <!-- CREDITS MODAL END -->
+
+    <script src="/includes/main.js"></script>
 </body>
 </html>

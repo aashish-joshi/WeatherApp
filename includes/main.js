@@ -108,3 +108,22 @@ if(!myStorage.getItem('api')){
     // console.log(myStorage.getItem('api'));
     getUserLocation(myStorage.getItem('api'));   
 }
+
+
+// Show/Hide the responsive nav bar
+function respNavBar() {
+    let navbar = document.getElementById("navbar");
+    let navBarButton = document.getElementById("navbar-button");
+
+    if (navbar.className.indexOf("w3-show") == -1) {
+      navbar.className += " w3-show";
+      navBarButton.innerHTML = '&times;';
+    } else { 
+      navbar.className = navbar.className.replace(" w3-show", "");
+      navBarButton.innerHTML = '&#9776;';
+    }
+  }
+
+function testClicker(){
+    alert('You clicked on something');
+}

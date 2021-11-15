@@ -153,8 +153,12 @@ Project Link: [https://github.com/aashish-joshi/WeatherApp](https://github.com/a
 
 * [StudyPoint](https://www.studytonight.com/post/how-to-build-a-weather-app-using-javascript-for-complete-beginners)
 * [W3-CSS](https://www.w3schools.com/w3css/default.asp)
+* [Readme.md Template](https://github.com/othneildrew/Best-README-Template)
+* [Icons by Flaticon](https://www.flaticon.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [issues-shield]: https://img.shields.io/github/issues/aashish-joshi/WeatherApp.svg?style=for-the-badge

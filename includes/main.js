@@ -4,6 +4,7 @@ const fullYear = d.getFullYear();
 const date = d.getDate();
 const month = d.getMonth() + 1;
 const day = d.getDay();
+const currDate = document.getElementById("currDate");
 
 const weekdays = new Array(7);
 weekdays[0] = "Sunday";
@@ -16,6 +17,21 @@ weekdays[6] = "Saturday";
 // Freeze the day array so that no changes are possible
 Object.freeze(weekdays);
 
+const monthName = new Array(12);
+monthName[1] = "Januray";
+monthName[2] = "February";
+monthName[3] = "March";
+monthName[4] = "April";
+monthName[5] = "May";
+monthName[6] = "June";
+monthName[7] = "July";
+monthName[8] = "August";
+monthName[9] = "September";
+monthName[10] = "October";
+monthName[11] = "November";
+monthName[12] = "December";
+Object.freeze(monthName);
+
 // store the DOM elements to be accessed
 const iconImg = document.getElementById('weather-icon');
 const loc = document.querySelector('#location');
@@ -27,7 +43,13 @@ const sunsetDOM = document.querySelector('.sunset');
 const modal = document.getElementById("myModal");
 const modalClose = document.getElementsByClassName("close");
 
-document.getElementById("currDate").innerHTML = `${fullYear}-${month}-${date}`;
+// SET THE CURRENT DATE AND DAY
+if(date < 10){
+    currDate.innerHTML = `${monthName[month]}, 0${date}`;
+}else{
+    currDate.innerHTML = `${monthName[month]}, ${date}`;
+}
+
 document.getElementById("currDay").innerHTML = `${weekdays[day]}`
 
 
@@ -107,4 +129,23 @@ if(!myStorage.getItem('api')){
 }else{
     // console.log(myStorage.getItem('api'));
     getUserLocation(myStorage.getItem('api'));   
+}
+
+
+// Show/Hide the responsive nav bar
+function respNavBar() {
+    let navbar = document.getElementById("navbar");
+    let navBarButton = document.getElementById("navbar-button");
+
+    if (navbar.className.indexOf("w3-show") == -1) {
+      navbar.className += " w3-show";
+      navBarButton.innerHTML = '&times;';
+    } else { 
+      navbar.className = navbar.className.replace(" w3-show", "");
+      navBarButton.innerHTML = '&#9776;';
+    }
+  }
+
+function testClicker(){
+    alert('You clicked on something');
 }

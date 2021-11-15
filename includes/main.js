@@ -18,18 +18,18 @@ weekdays[6] = "Saturday";
 Object.freeze(weekdays);
 
 const monthName = new Array(12);
-monthName[0] = "Januray";
-monthName[1] = "February";
-monthName[2] = "March";
-monthName[3] = "April";
-monthName[4] = "May";
-monthName[5] = "June";
-monthName[6] = "July";
-monthName[7] = "August";
-monthName[8] = "September";
-monthName[9] = "October";
-monthName[10] = "November";
-monthName[11] = "December";
+monthName[1] = "Januray";
+monthName[2] = "February";
+monthName[3] = "March";
+monthName[4] = "April";
+monthName[5] = "May";
+monthName[6] = "June";
+monthName[7] = "July";
+monthName[8] = "August";
+monthName[9] = "September";
+monthName[10] = "October";
+monthName[11] = "November";
+monthName[12] = "December";
 Object.freeze(monthName);
 
 // store the DOM elements to be accessed

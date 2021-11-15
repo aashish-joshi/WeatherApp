@@ -4,6 +4,7 @@ const fullYear = d.getFullYear();
 const date = d.getDate();
 const month = d.getMonth() + 1;
 const day = d.getDay();
+const currDate = document.getElementById("currDate");
 
 const weekdays = new Array(7);
 weekdays[0] = "Sunday";
@@ -16,6 +17,21 @@ weekdays[6] = "Saturday";
 // Freeze the day array so that no changes are possible
 Object.freeze(weekdays);
 
+const monthName = new Array(12);
+monthName[0] = "Januray";
+monthName[1] = "February";
+monthName[2] = "March";
+monthName[3] = "April";
+monthName[4] = "May";
+monthName[5] = "June";
+monthName[6] = "July";
+monthName[7] = "August";
+monthName[8] = "September";
+monthName[9] = "October";
+monthName[10] = "November";
+monthName[11] = "December";
+Object.freeze(monthName);
+
 // store the DOM elements to be accessed
 const iconImg = document.getElementById('weather-icon');
 const loc = document.querySelector('#location');
@@ -27,7 +43,13 @@ const sunsetDOM = document.querySelector('.sunset');
 const modal = document.getElementById("myModal");
 const modalClose = document.getElementsByClassName("close");
 
-document.getElementById("currDate").innerHTML = `${fullYear}-${month}-${date}`;
+// SET THE CURRENT DATE AND DAY
+if(date < 10){
+    currDate.innerHTML = `${monthName[month]}, 0${date}`;
+}else{
+    currDate.innerHTML = `${monthName[month]}, ${date}`;
+}
+
 document.getElementById("currDay").innerHTML = `${weekdays[day]}`
 
 

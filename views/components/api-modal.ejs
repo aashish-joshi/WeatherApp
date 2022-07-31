@@ -1,0 +1,27 @@
+<!-- API KEY MODAL START -->
+<div id="myModal" class="w3-modal modal">
+    <div class="w3-modal-content w3-card-4 w3-indigo">
+      <header class="w3-container align-center"> 
+        <span onclick="document.getElementById('myModal').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h3 class="modal">OpenWeatherMap API Key</h3>
+      </header>
+      <div class="w3-container">
+        <p class="modal-body align-center">Enter your OpenWeatherMap API Key to get the weather data.</p>
+        <p class="modal-body align-center">(The key is stored on your browser)</p>
+        <div class="modal-form align-center">
+            <form id="getKey" autocomplete="off">
+                <input class="inputbox" type="text" name="apiKey" id="apiKey" required placeholder="Your API Key">
+        </div>
+        <div class="modal-form spacer-1"></div>
+        <div class="modal-form align-center">
+                <button class="button" type="button" id="btn-saveApiKey">Save</button>
+            </form>
+        </div>
+      </div>
+      <footer class="w3-container modal-footer align-center">
+        <p>Don't have an API key? <a class="modal-links" href="https://home.openweathermap.org/api_keys" target="_blank" rel="noopener noreferrer">Get it</a> for free.</p>
+      </footer>
+    </div>
+</div>
+<!-- API KEY MODAL END -->

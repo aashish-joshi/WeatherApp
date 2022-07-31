@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head.ejs') %>
+</head>
+
+<body>
+
+  <%- include('./partials/nav.ejs') %>
+    <div class="page-container">
+        <img src="" alt="" srcset="" id="weather-icon">
+        <div id="location">Unable to Fetch Weather</div>
+        <div class="desc">No Information Available</div>
+    
+        <div class="weather">
+            <div class="c">Error</div>
+            <div class="circle"></div>
+            <div class="f">Error</div>
+        </div>
+        <div class="info">
+            <h4 class="current"><span id="currDate">2020-02-20</span>&nbsp;|&nbsp;<span id="currDay">Monday</span></h4>
+            <hr />
+            <div class="align-center" style="margin-bottom: -15px !important;">
+              <h4>Sunrise: <span class="sunrise">No Information Available</span></h4>
+            </div>
+            <div class="align-center">
+              <h4>Sunset: <span class="sunset">No Information Available</span></h4>
+            </div>
+        </div>
+    </div>
+
+    <%- include('./components/api-modal.ejs') %>
+
+    <%- include('./components/credit-modal.ejs') %>
+
+    <!-- MAIN JS FILE -->
+    <script src="/main.js"></script>
+</body>
+</html>

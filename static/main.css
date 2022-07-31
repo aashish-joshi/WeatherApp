@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box !important;
+  }
+
+html, body {
+  margin: 0 !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+body {
+font-family: 'Lato', sans-serif !important;
+overflow: hidden !important;
+background: rgb(251, 242, 133);
+background: radial-gradient(
+  circle,
+  rgba(251, 242, 133, 0.6334908963585435) 0%,
+  rgba(224, 196, 91, 0.8407738095238095) 35%,
+  rgba(230, 224, 113, 1) 100%
+);
+}
+
+.page-container {
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;  
+  font-family: 'Lato', sans-serif !important;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 1.5rem;
+}
+
+.circle{
+  background-color: black;
+  border-radius: 50px;
+  height: 15px;
+  width: 15px;
+  margin: 0 15px;
+}
+
+.current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+hr {
+  height: 1px !important;
+  background-color: black !important;
+  border: 0 !important;
+  margin: 5px 0 !important;
+}
+
+a, a:visited,a:active {
+  text-decoration: none !important;
+}
+
+.modal-links {
+  color: rgb(224, 196, 91) !important;
+}
+
+/* Special classes for Modal*/
+.modal {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.modal-header {
+  color: rgb(252, 252, 252);
+  margin: 0;
+  margin-bottom: 7% !important;
+}
+
+.modal-subheader{
+  font-weight: 500;
+  margin-left: 1%;
+  margin-bottom: 3%;
+  border-bottom: 3px dotted;
+}
+
+.align-center {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.modal-body {
+  margin: 10px !important;
+}
+
+.modal-footer {
+  margin-top: 1vh !important;
+  padding: 7px 16px !important;
+}
+
+.modal-form {
+  margin-top: 1rem;
+}
+
+.button {
+  background-color: rgb(251, 242, 133); /* Light Yellow */
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  font-family: 'Francois One', sans-serif;
+}
+
+.spacer-1 {
+  margin: 1% 0 !important;
+}
+
+.spacer-3 {
+  margin: 3% 0 !important;
+}
+
+.inputbox {
+  width: 100% !important;
+  padding: 12px 20px !important;
+  margin: 8px 0 !important;
+  box-sizing: border-box !important;
+}
+
+.nav-item-right {
+  float: right !important;
+}

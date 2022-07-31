@@ -1,0 +1,34 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "A sample weather app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp && node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aashish-joshi/WeatherApp.git"
+  },
+  "keywords": [
+    "weather"
+  ],
+  "author": "aashish joshi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aashish-joshi/WeatherApp/issues"
+  },
+  "homepage": "https://github.com/aashish-joshi/WeatherApp#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "run-p": "^0.0.0",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "gulp-terser": "^2.1.0"
+  }
+}

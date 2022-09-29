@@ -1,24 +1,12 @@
+import * as constants from './components/Constants';
+
 let myStorage = window.localStorage;
 const d = new Date();
 const fullYear = d.getFullYear();
 const date = d.getDate();
 const month = d.getMonth() + 1;
 const day = d.getDay();
-const currDate = document.getElementById("currDate") as HTMLElement;
-const currDay = document.getElementById("currDay") as HTMLElement;
-const apiKeyElem = document.getElementById("apiKey")! as HTMLInputElement;
-const apiKeyModal = document.getElementById('btn-saveApiKey') as HTMLButtonElement;
 const pageUrl = window.location.href.toString().split(window.location.host)[1];
-
-const weekdays = new Array(7);
-weekdays[0] = "Sunday";
-weekdays[1] = "Monday";
-weekdays[2] = "Tuesday";
-weekdays[3] = "Wednesday";
-weekdays[4] = "Thursday";
-weekdays[5] = "Friday";
-weekdays[6] = "Saturday";
-Object.freeze(weekdays);
 
 const monthName = new Array(12);
 monthName[1] = "Januray";
@@ -47,15 +35,15 @@ const modal = document.getElementById("myModal") as HTMLElement;
 const modalClose = document.getElementsByClassName("close");
 
 if(pageUrl === '/'){
-    apiKeyModal.addEventListener('click', saveApiKey);
+    constants.apiKeyModal.addEventListener('click', saveApiKey);
     // SET THE CURRENT DATE AND DAY
     if (date < 10) {
-        currDate.innerHTML = `${monthName[month]}, 0${date}`;
+        constants.currDate.innerHTML = `${monthName[month]}, 0${date}`;
     } else {
-        currDate.innerHTML = `${monthName[month]}, ${date}`;
+        constants.currDate.innerHTML = `${monthName[month]}, ${date}`;
     }
 
-    currDay.innerHTML = `${weekdays[day]}`;
+    constants.currDay.innerHTML = `${constants.weekdays[day]}`;
 
     function getUserLocation(apiKey: string) {
 
@@ -91,7 +79,7 @@ if(pageUrl === '/'){
 
 function saveApiKey() {
     
-    const key = apiKeyElem.value;
+    const key = constants.apiKeyElem.value;
     if (key) {
         myStorage.setItem('api', key);
         console.log("key saved");
